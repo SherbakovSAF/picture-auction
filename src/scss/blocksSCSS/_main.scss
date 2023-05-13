@@ -1,0 +1,49 @@
+.main__title {
+     margin-top: 45px;
+}
+.main__item__wrap {
+     margin-top: 39px;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-row-gap: 40px;
+}
+
+article {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     border: 1px solid #E1E1E1;
+     max-width: 280px;
+
+     img{
+          max-width: 100%;
+     }
+
+     h2{
+          margin-top: 20px;
+     }
+}
+
+.main__item__content__interaction{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 22px;
+     *{
+          margin: 0;
+     }
+
+     
+     .main__item__content__price__wrap {
+          
+          margin-right: 21px;
+          .main__item__content__price-sale {
+               text-decoration: line-through;
+               color: #A0A0A0
+          }
+     }
+}
+
+.main__item__content__sales-title {
+}

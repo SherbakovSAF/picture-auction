@@ -23,24 +23,81 @@
     </div>
   </header>
   <hr>
-<main class="container">
-  <h1 class="main__title">Картины эпохи Возрождения</h1>
-  <div class="main__item__wrap">
-    <article>
-      <div class="main__item__content__wrap">
-        <img src="" alt="">
-        <h2>«Рождение Венеры» Сандро Боттичелли</h2>
-        <div class="main__item__content__price__wrap">
-          <p class="main__item__content__price-sale"></p>
-          <h4>1 000 000 $</h4>
-          <h3>1 000 000 $</h3>
-          <button class="btn">Купить</button>
+  <main class="container">
+    <h1 class="main__title">Картины эпохи Возрождения</h1>
+    <div class="main__item__wrap">
+      <article>
+        <div class="main__item__content__wrap">
+          <img src="./assets/media/img/cardImage/venera.jpg" alt="">
+          <h2>«Рождение Венеры» Сандро Боттичелли</h2>
+          <div class="main__item__content__interaction">
+            <div class="main__item__content__price__wrap">
+              <h6 class="main__item__content__price-sale">1 000 000 $</h6>
+              <h3>1 000 000 $</h3>
+            </div>
+            <button class="btn">Купить</button>
+          </div>
+          <h3 class="main__item__content__sales-title">Продано на аукционе</h3>
         </div>
-        <h3 class="main__item__content__sales-title">Продано на аукционе</h3>
-      </div>
-    </article>
-  </div>
-</main>
+      </article>
+      <article>
+        <div class="main__item__content__wrap">
+          <img src="./assets/media/img/cardImage/venera.jpg" alt="">
+          <h2>«Рождение Венеры» Сандро Боттичелли</h2>
+          <div class="main__item__content__interaction">
+            <div class="main__item__content__price__wrap">
+              <h6 class="main__item__content__price-sale">1 000 000 $</h6>
+              <h3>1 000 000 $</h3>
+            </div>
+            <button class="btn">Купить</button>
+          </div>
+          <h3 class="main__item__content__sales-title">Продано на аукционе</h3>
+        </div>
+      </article>
+      <article>
+        <div class="main__item__content__wrap">
+          <img src="./assets/media/img/cardImage/venera.jpg" alt="">
+          <h2>«Рождение Венеры» Сандро Боттичелли</h2>
+          <div class="main__item__content__interaction">
+            <div class="main__item__content__price__wrap">
+              <h6 class="main__item__content__price-sale">1 000 000 $</h6>
+              <h3>1 000 000 $</h3>
+            </div>
+            <button class="btn">Купить</button>
+          </div>
+          <h3 class="main__item__content__sales-title">Продано на аукционе</h3>
+        </div>
+      </article>
+      <article>
+        <div class="main__item__content__wrap">
+          <img src="./assets/media/img/cardImage/venera.jpg" alt="">
+          <h2>«Рождение Венеры» Сандро Боттичелли</h2>
+          <div class="main__item__content__interaction">
+            <div class="main__item__content__price__wrap">
+              <h6 class="main__item__content__price-sale">1 000 000 $</h6>
+              <h3>1 000 000 $</h3>
+            </div>
+            <button class="btn">Купить</button>
+          </div>
+          <h3 class="main__item__content__sales-title">Продано на аукционе</h3>
+        </div>
+      </article>
+      <article>
+        <div class="main__item__content__wrap">
+          <img src="./assets/media/img/cardImage/venera.jpg" alt="">
+          <h2>«Рождение Венеры» Сандро Боттичелли</h2>
+          <div class="main__item__content__interaction">
+            <div class="main__item__content__price__wrap">
+              <h6 class="main__item__content__price-sale">1 000 000 $</h6>
+              <h3>1 000 000 $</h3>
+            </div>
+            <button class="btn">Купить</button>
+          </div>
+          <h3 class="main__item__content__sales-title">Продано на аукционе</h3>
+        </div>
+      </article>
+    </div>
+  </main>
 <footer>
   <div class="footer__block__information">
     <img src="" alt="">
