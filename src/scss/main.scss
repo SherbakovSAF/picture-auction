@@ -1,11 +1,25 @@
 @import './normalize';
 @import './MerriweatherFont';
 @import './UIKitStyle';
+@import './blocksSCSS/navigation';
 
 *{
      box-sizing: border-box;
 }
 
+
 body{
      font-family: 'Merriweather';
+}
+
+.container {
+     max-width: 1216px;
+     margin: 0 auto;
+}
+
+hr{
+     border: none;
+     background-color: #E1E1E1;
+     height: 1px;
+
 }
