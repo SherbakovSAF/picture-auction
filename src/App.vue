@@ -2,7 +2,7 @@
 <div class="main__wrap">
   <header class="navigation__block container">
     <div class="navigation__block__information">
-      <img src="./assets/media/img/logo-museum.svg" alt="Музей имени ...">
+      <img src="../public/img/logo-museum.svg" alt="Музей имени ...">
       <nav>
         <ul>
           <li><a href="#"><h5>Каталог</h5></a></li>
@@ -17,7 +17,7 @@
       <input type="text" name="" id="" placeholder="Поиск по названию картины">
       <button class="btn">Найти</button>
       <div class="navigation__block__user-active__basket__wrap">
-        <img src="./assets/media/img/basket.svg" alt="Купить картины">
+        <img src="../public/img/basket.svg" alt="Купить картины">
         <div class="navigation__block__user-active__count__shop"><p>1</p></div>
       </div>
     </div>
@@ -26,70 +26,28 @@
   <main class="container">
     <h1 class="main__title">Картины эпохи Возрождения</h1>
     <div class="main__item__wrap">
-      <article>
+      <article v-for="card in itemState" :key="card.id">
         <div class="main__item__content__wrap">
-          <img src="./assets/media/img/cardImage/venera.jpg" alt="">
-          <h2>«Рождение Венеры» Сандро Боттичелли</h2>
-          <div class="main__item__content__interaction">
+          <img :src="card.image" :alt="card.title">
+          <h2>{{ card.title }}</h2>
+          <div v-if="!card.isSales" class="main__item__content__interaction">
             <div class="main__item__content__price__wrap">
-              <h6 class="main__item__content__price-sale">1 000 000 $</h6>
-              <h3>1 000 000 $</h3>
+              <h6 class="main__item__content__price-sale">
+                {{card.pastPrice > 0 ? card.pastPrice + " $" : ''}} 
+              </h6>
+              <h3>{{ card.currentPrice }} $</h3>
             </div>
             <button class="btn">Купить</button>
           </div>
-          <h3 class="main__item__content__sales-title">Продано на аукционе</h3>
+          <h3 class="main__item__content__sales-title">{{ card.isSales ? 'Проданно на аукционе' : ''}}</h3>
         </div>
       </article>
-      
-      <article>
-        <div class="main__item__content__wrap">
-          <img src="./assets/media/img/cardImage/venera.jpg" alt="">
-          <h2>«Рождение Венеры» Сандро Боттичелли</h2>
-          <div class="main__item__content__interaction">
-            <div class="main__item__content__price__wrap">
-              <h6 class="main__item__content__price-sale">1 000 000 $</h6>
-              <h3>1 000 000 $</h3>
-            </div>
-            <button class="btn">Купить</button>
-          </div>
-          <h3 class="main__item__content__sales-title">Продано на аукционе</h3>
-        </div>
-      </article>
-      <article>
-        <div class="main__item__content__wrap">
-          <img src="./assets/media/img/cardImage/venera.jpg" alt="">
-          <h2>«Рождение Венеры» Сандро Боттичелли</h2>
-          <div class="main__item__content__interaction">
-            <div class="main__item__content__price__wrap">
-              <h6 class="main__item__content__price-sale">1 000 000 $</h6>
-              <h3>1 000 000 $</h3>
-            </div>
-            <button class="btn">Купить</button>
-          </div>
-          <h3 class="main__item__content__sales-title">Продано на аукционе</h3>
-        </div>
-      </article>
-      <article>
-        <div class="main__item__content__wrap">
-          <img src="./assets/media/img/cardImage/venera.jpg" alt="">
-          <h2>«Рождение Венеры» Сандро Боттичелли</h2>
-          <div class="main__item__content__interaction">
-            <div class="main__item__content__price__wrap">
-              <h6 class="main__item__content__price-sale">1 000 000 $</h6>
-              <h3>1 000 000 $</h3>
-            </div>
-            <button class="btn">Купить</button>
-          </div>
-          <h3 class="main__item__content__sales-title">Продано на аукционе</h3>
-        </div>
-      </article>
-      
     </div>
   </main>
 <footer>
   <div class="footer__block container">
     <div class="footer__block__information">
-      <img src="./assets/media/img/logo-museum.svg" alt="">
+      <img src="../public/img/logo-museum.svg" alt="">
       <nav>
         <ul>
           <li><a href="#"><h5>Каталог</h5></a></li>
@@ -111,11 +69,44 @@
 
 <script>
 
-
 export default {
   name: 'App',
   data() {
     return {
+      itemState: [
+        {
+          id: 1,
+          isSales: false,
+          image: `./img/cardImage/venera.jpg`,
+          title: 'Рождение Венеры» Сандро Боттичелли',
+          pastPrice: 2000000,
+          currentPrice: 1000000
+        },
+        {
+          id: 2,
+          isSales: false,
+          image: `./img/cardImage/vechere.jpg`,
+          title: 'Рождение Венеры» Сандро Боттичелли',
+          pastPrice: null,
+          currentPrice: 1000000
+        },
+        {
+          id: 3,
+          isSales: false,
+          image: `./img/cardImage/makeadam.jpg`,
+          title: 'Рождение Венеры» Сандро Боттичелли',
+          pastPrice: 6000000,
+          currentPrice: 1000000
+        },
+        {
+          id: 4,
+          isSales: true,
+          image: `./img/cardImage/kill.jpg`,
+          title: 'Рождение Венеры» Сандро Боттичелли',
+          pastPrice: 2000,
+          currentPrice: 1000000
+        }
+      ],
       searchInput: ''
     }
   }

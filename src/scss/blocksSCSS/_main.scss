@@ -6,6 +6,7 @@ main{
      }
 }
 
+
 .main__item__wrap {
      margin-top: 39px;
      display: grid;
@@ -28,25 +29,33 @@ article {
      h2{
           margin-top: 20px;
      }
+     
+     .main__item__content__wrap{
+          height: 100%;
+     }
 }
 
 .main__item__content__interaction{
      display: flex;
      align-items: center;
      justify-content: center;
-     margin-top: 22px;
+     margin: 23px 0px;
      *{
           margin: 0;
      }
 
      
      .main__item__content__price__wrap {
-          
           margin-right: 21px;
           .main__item__content__price-sale {
                text-decoration: line-through;
                color: #A0A0A0
           }
      }
+
+     
 }
 
+.main__item__content__sales-title{
+     margin: 35px 0px;
+}
