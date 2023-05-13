@@ -15,7 +15,7 @@
     </div>
     <div class="navigation__block__user-active">
       <input type="text" placeholder="Поиск по названию картины" v-model="searchInput">
-      <button class="btn">Найти</button>
+      <button @click="itemStateFilterInput" class="btn">Найти</button>
       <div class="navigation__block__user-active__basket__wrap">
         <img src="../public/img/basket.svg" alt="Купить картины">
         <div v-if="filterSelectedItem.length" class="navigation__block__user-active__count__shop"><p>{{ filterSelectedItem.length }}</p></div>
@@ -26,7 +26,7 @@
   <main class="container">
     <h1 class="main__title">Картины эпохи Возрождения</h1>
     <div class="main__item__wrap">
-      <article :class="{'main__item-sold': card.isSales}" v-for="card in itemStateFilterInput" :key="card.id">
+      <article :class="{'main__item-sold': card.isSales}" v-for="card in filterItemState" :key="card.id">
         <div class="main__item__content__wrap">
           <img :src="card.image" :alt="card.title">
           <h2>{{ card.title }}</h2>
@@ -128,16 +128,19 @@ export default {
           isSelected: false,
         }
       ],
-      searchInput: ''
+      searchInput: '',
+      filterItemState: []
     }
   },
   computed: {
     filterSelectedItem() {
       return this.itemState.filter(e=> e.isSelected == true)
     },
-    itemStateFilterInput(){
-      return this.itemState.filter(e=> e.title.toLowerCase().includes(this.searchInput.toLowerCase()))
-    }
+
+    // Я сначала сделал без нажатия на кнопку, а потом увидил что я и кнопку оказывается делал)
+    // itemStateFilterInput(){
+    //   return this.itemState.filter(e=> e.title.toLowerCase().includes(this.searchInput.toLowerCase()))
+    // }
   },
   methods: {
     async sendRequest(item) {
@@ -160,6 +163,9 @@ export default {
       var n = num.toString();
       var separator = " ";
       return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + separator);
+    },
+      itemStateFilterInput(){
+      this.filterItemState = this.itemState.filter(e=> e.title.toLowerCase().includes(this.searchInput.toLowerCase()))
     }
   },
   mounted: function(){
@@ -167,10 +173,12 @@ export default {
     if(localStorageItemState) {
       this.itemState = JSON.parse(localStorage.getItem('itemState'))
     }
+
+    this.filterItemState = [...this.itemState]
   }
 }
 </script>
 
-<style src="./scss/main.scss" lang="scss">
+<style src="./scss/index.scss" lang="scss">
 
 </style>
