@@ -2,6 +2,7 @@
 $main-white: #F4F6F9;
 $main-grey: #9F9F9F;
 
+
 h1{
      font-size: 24px;
      font-weight: 700;
@@ -42,10 +43,14 @@ h6{
      padding: 14px 28px;
      background: #403432;
      font-size: 14px;
-
+     
+width: 120px;
+height: 50px;
+     position: relative;
      border: none;
      color: $main-white;
      transition: background .3s ease;
+     
 }
 
 .btn:hover {
@@ -58,6 +63,14 @@ h6{
 
 .btn-checked{
      background: #5B3A32;
+     padding: 14px 9px;
+     .main__item__content__price__is-selected{
+          display: flex;
+          align-items: center;
+          img{
+               margin-right: 4px;
+          }
+     }
 }
 
 input{
