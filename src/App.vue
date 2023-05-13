@@ -99,22 +99,24 @@
     </div>
   </main>
 <footer>
-  <div class="footer__block__information">
-    <img src="" alt="">
-    <nav>
-      <ul>
-        <li><a href="#"><h5>Каталог</h5></a></li>
-        <li><a href="#"><h5>Доставка</h5></a></li>
-        <li><a href="#"><h5>Оплата</h5></a></li>
-        <li><a href="#"><h5>Контакты</h5></a></li>
-        <li><a href="#"><h5>О галерее</h5></a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="footer__block__contact">
-    <a href="tel:8495999999999"><h5>+7 (495) 999-99-99</h5></a>
-    <a href="tel:8495999999999"><h5>г. Воронеж, ул. Никитина, 119А</h5></a>
-
+  <div class="footer__block container">
+    <div class="footer__block__information">
+      <img src="./assets/media/img/logo-museum.svg" alt="">
+      <nav>
+        <ul>
+          <li><a href="#"><h5>Каталог</h5></a></li>
+          <li><a href="#"><h5>Доставка</h5></a></li>
+          <li><a href="#"><h5>Оплата</h5></a></li>
+          <li><a href="#"><h5>Контакты</h5></a></li>
+          <li><a href="#"><h5>О галерее</h5></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__block__contact">
+      <a href="tel:8495999999999"><h5 class="footer__block__contact__number">+7 (495) 999-99-99</h5></a>
+      <a href="tel:8495999999999"><h5 class="footer__block__contact__address">г. Воронеж, ул. Никитина, 119А</h5></a>
+  
+    </div>
   </div>
 </footer>
 </div>

@@ -3,7 +3,7 @@
 @import './UIKitStyle';
 @import './blocksSCSS/navigation';
 @import './blocksSCSS/main';
-
+@import './blocksSCSS/footer';
 
 *{
      box-sizing: border-box;
@@ -23,5 +23,11 @@ hr{
      border: none;
      background-color: #E1E1E1;
      height: 1px;
+}
+li{
+     transition: 0.3s ease-in all;
+}
 
+li:hover{
+     color: #9F9F9F;
 }
