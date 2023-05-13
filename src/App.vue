@@ -37,7 +37,10 @@
               </h6>
               <h3>{{ card.currentPrice }} $</h3>
             </div>
-            <button class="btn">Купить</button>
+            <button @click="sendRequest(card)" class="btn">
+              <div v-if="card.isLoader" class="lds-dual-ring"></div>
+              <h4 v-else>Купить</h4>
+            </button>
           </div>
           <h3 class="main__item__content__sales-title">{{ card.isSales ? 'Проданно на аукционе' : ''}}</h3>
         </div>
@@ -80,7 +83,8 @@ export default {
           image: `./img/cardImage/venera.jpg`,
           title: 'Рождение Венеры» Сандро Боттичелли',
           pastPrice: 2000000,
-          currentPrice: 1000000
+          currentPrice: 1000000,
+          isLoader: false,
         },
         {
           id: 2,
@@ -88,7 +92,8 @@ export default {
           image: `./img/cardImage/vechere.jpg`,
           title: 'Рождение Венеры» Сандро Боттичелли',
           pastPrice: null,
-          currentPrice: 1000000
+          currentPrice: 1000000,
+          isLoader: false,
         },
         {
           id: 3,
@@ -96,7 +101,8 @@ export default {
           image: `./img/cardImage/makeadam.jpg`,
           title: 'Рождение Венеры» Сандро Боттичелли',
           pastPrice: 6000000,
-          currentPrice: 1000000
+          currentPrice: 1000000,
+          isLoader: false,
         },
         {
           id: 4,
@@ -104,10 +110,19 @@ export default {
           image: `./img/cardImage/kill.jpg`,
           title: 'Рождение Венеры» Сандро Боттичелли',
           pastPrice: 2000,
-          currentPrice: 1000000
+          currentPrice: 1000000,
+          isLoader: false,
         }
       ],
       searchInput: ''
+    }
+  },
+  methods: {
+    async sendRequest(item) {
+      item.isLoader = true
+      let response = await fetch("https://jsonplaceholder.typicode.com/posts/1")
+      item.isLoader = false
+      response.ok ? alert('Запрос удачный') : alert('Запрос неудался')
     }
   }
 }
