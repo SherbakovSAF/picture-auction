@@ -1,0 +1,11 @@
+@import './normalize';
+@import './MerriweatherFont';
+@import './UIKitStyle';
+
+*{
+     box-sizing: border-box;
+}
+
+body{
+     font-family: 'Merriweather';
+}

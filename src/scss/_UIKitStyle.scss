@@ -1,0 +1,77 @@
+
+$main-white: #F4F6F9;
+$main-grey: #9F9F9F;
+
+h1{
+     font-size: 24px;
+     font-weight: 700;
+     line-height: 36px;
+}
+
+h2{
+     font-size: 18px;
+     font-weight: 400;
+     line-height: 24px;
+}
+
+h3{
+     font-size: 16px;
+     font-weight: 700;
+     line-height: 24px;
+}
+
+h4{
+     font-size: 14px;
+     font-weight: 700;
+     line-height: 21px;
+}
+
+h5{
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 21px;
+}
+
+h6{
+     font-size: 14px;
+     font-weight: 300;
+     line-height: 21px;
+}
+
+.btn {
+     padding: 14px 28px;
+     background: #403432;
+     font-size: 14px;
+
+     border: none;
+     color: $main-white;
+     transition: background .3s ease;
+}
+
+.btn:hover {
+     background: #776763;
+}
+
+.btn:disabled{
+     background: #C1B4B1;
+}
+
+.btn-checked{
+     background: #5B3A32;
+}
+
+input{
+     border: 1px solid #E1E1E1;
+     padding: 13px 16px;
+     font-size: 14px;
+     outline: none;
+}
+
+input:placeholder{
+color: $main-grey;
+
+}
+
+input:focus{
+     border-color: #B5B5B5;
+}
