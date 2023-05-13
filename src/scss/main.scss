@@ -5,24 +5,31 @@
 @import './blocksSCSS/main';
 @import './blocksSCSS/footer';
 
+
+body{
+     font-family: 'Merriweather';     
+}
+
+.main__wrap{
+     display: flex;
+     flex-direction: column;
+     height: 100vh;
+}
+
 *{
      box-sizing: border-box;
 }
 
-
-body{
-     font-family: 'Merriweather';
-}
-
 .container {
-     max-width: 1216px;
+     width: 1216px;
      margin: 0 auto;
+     
 }
 
 hr{
      border: none;
      background-color: #E1E1E1;
-     height: 1px;
+     height: 1px;  
 }
 li{
      transition: 0.3s ease-in all;

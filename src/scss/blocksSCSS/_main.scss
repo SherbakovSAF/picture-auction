@@ -1,6 +1,11 @@
-.main__title {
-     margin-top: 45px;
+
+main{
+     padding: 45px 0px;
+     h1{
+          margin: 0;
+     }
 }
+
 .main__item__wrap {
      margin-top: 39px;
      display: grid;
