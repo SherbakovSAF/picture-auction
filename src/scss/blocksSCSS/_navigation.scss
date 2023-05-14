@@ -31,27 +31,28 @@
 
 .navigation__block__user-active__basket__wrap {
      position: relative;
-     display: block;
+     display: flex;
      margin-left: 33px;
      img {
           width: 19px;
           height: 20.58px;
           display: block;
      }
-}
-.navigation__block__user-active__count__shop {
-     position: absolute;
-     top: 0;
-     left: 100%;
-     transform: translate(0px, -3px);
-     background-color: #403432;
-     padding: 0px 5px;
-     
-     border-radius: 100%;
-     p {
-          font-size: 12px;
-          color: white;
-          margin: 0;
 
+     .navigation__block__user-active__count__shop {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #403432;
+          width: 15px;
+          height: 15px;
+          transform: translateY(-50%);
+          border-radius: 100%;
+          p {
+               font-size: 12px;
+               color: white;
+               margin: 0;
+     
+          }
      }
 }

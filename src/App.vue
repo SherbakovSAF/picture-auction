@@ -28,7 +28,7 @@
     <div class="main__item__wrap">
       <article :class="{'main__item-sold': card.isSales}" v-for="card in filterItemState" :key="card.id">
         <div class="main__item__content__wrap">
-          <img :src="card.image" :alt="card.title">
+          <img class="main__item__content__img" :src="card.image" :alt="card.title">
           <h2>{{ card.title }}</h2>
           <div v-if="!card.isSales" class="main__item__content__interaction">
             <div class="main__item__content__price__wrap">
@@ -52,7 +52,7 @@
             </button>
             
           </div>
-          <h3 class="main__item__content__sales-title">{{ card.isSales ? 'Проданно на аукционе' : ''}}</h3>
+          <h3 v-show="card.isSales" class="main__item__content__sales-title">Проданно на аукционе</h3>
         </div>
       </article>
     </div>
