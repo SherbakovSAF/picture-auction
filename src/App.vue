@@ -1,22 +1,27 @@
 <template>
 <div class="main__wrap">
-  <header-block />
+  <nav-block :selectedCardCount="selectedCardCount"/>
   <hr>
-  <main-block />
+  <main-block @updateCard="selectedCardCount = $event"/>
   <footer-block />
 </div>
 </template>
 
 <script>
-import HeaderBlock from '@/components/HeaderBlock'
+import NavBlock from '@/components/NavBlock'
 import MainBlock from '@/components/MainBlock'
 import FooterBlock from '@/components/FooterBlock'
 export default {
   name: 'App',
   components: {
-    HeaderBlock,
+    NavBlock,
     MainBlock,
     FooterBlock
+  },
+  data(){
+    return {
+      selectedCardCount: 0
+    }
   },
 }
 </script>

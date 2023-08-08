@@ -13,18 +13,13 @@
       </nav>
     </div>
     <div class="navigation__block__user-active">
-      <header-block-input />
+      <nav-block-input />
       <div class="navigation__block__user-active__basket__wrap">
         <img src="../../public/img/basket.svg" alt="Купить картины">
-        <!-- <div 
-          v-show="filterSelectedItem.length" 
-          class="navigation__block__user-active__count__shop">
-          <p>{{ filterSelectedItem.length }}</p>
-        </div> -->
         <div 
-        
+          v-show="selectedCardCount > 0" 
           class="navigation__block__user-active__count__shop">
-          
+          <p>{{ selectedCardCount }}</p>
         </div>
       </div>
     </div>
@@ -32,17 +27,23 @@
 </template>
 
 <script>
+import NavBlockInput from './NavBlock-input';
+
 export default {
   name: 'HeaderBlock',
+  components: {
+    NavBlockInput
+  },
+  props: {
+    selectedCardCount: {
+      type: Number,
+      required: false,
+    }
+  },
   data(){
     return {
       searchInput: '',
     }
-  },
-  computed: {
-    // filterSelectedItem() {
-    //   return this.itemState.filter(e=> e.isSelected == true)
-    // },
   },
 }
 </script>
