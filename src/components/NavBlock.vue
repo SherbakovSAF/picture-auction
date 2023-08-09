@@ -13,7 +13,7 @@
       </nav>
     </div>
     <div class="navigation__block__user-active">
-      <nav-block-input />
+      <nav-block-input @searchCardValue="$emit('searchCardValue', $event)"/>
       <div class="navigation__block__user-active__basket__wrap">
         <img src="../../public/img/basket.svg" alt="Купить картины">
         <div 
@@ -35,15 +35,8 @@ export default {
     NavBlockInput
   },
   props: {
-    selectedCardCount: {
-      type: Number,
-      required: false,
-    }
+    selectedCardCount: {type: Number, required: false,}
   },
-  data(){
-    return {
-      searchInput: '',
-    }
-  },
+  emits: ['searchCardValue'],
 }
 </script>

@@ -3,7 +3,7 @@
     <h1 class="main__title">Картины эпохи Возрождения</h1>
     <div class="main__item__wrap">
       <item-card 
-        v-for="card in cardState" 
+        v-for="card in cardFiltering" 
         :cardInfo="card" 
         :key="card.id"
         :isSelected="card.isSelected"
@@ -19,6 +19,9 @@ export default {
   name: 'MainBlock',
   components: {
     ItemCard
+  },
+  props: {
+    searchCardValue: {type: String, required: false}
   },
   emits: ['updateCard'],
   data(){
@@ -71,7 +74,13 @@ export default {
     emitUpdateState() {
       const selectedCard = this.cardState.filter(e => e.isSelected)
       this.$emit('updateCard', selectedCard.length)
-    }
+    },
+  },
+  computed: {
+    cardFiltering() {
+      return this.cardState
+      .filter(e => e.title.toLowerCase().includes(this.searchCardValue.toLowerCase()))
+    },
   },
   watch: {
     cardState: {

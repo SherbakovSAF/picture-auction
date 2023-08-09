@@ -1,8 +1,13 @@
 <template>
 <div class="main__wrap">
-  <nav-block :selectedCardCount="selectedCardCount"/>
+  <nav-block 
+    :selectedCardCount="selectedCardCount"
+    @searchCardValue="searchCardValue = $event"/>
   <hr>
-  <main-block @updateCard="selectedCardCount = $event"/>
+  <main-block 
+  @updateCard="selectedCardCount = $event"
+  :searchCardValue="searchCardValue"
+  />
   <footer-block />
 </div>
 </template>
@@ -20,7 +25,8 @@ export default {
   },
   data(){
     return {
-      selectedCardCount: 0
+      selectedCardCount: 0,
+      searchCardValue: ''
     }
   },
 }
