@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'NavBlock-input',
+  name: 'HeaderBlock-input',
   props: ['modelValue'],
   emits: ['searchCardValue'],
   data(){

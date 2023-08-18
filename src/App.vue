@@ -1,6 +1,6 @@
 <template>
 <div class="main__wrap">
-  <nav-block 
+  <header-block 
     :selectedCardCount="selectedCardCount"
     @searchCardValue="searchCardValue = $event"/>
   <hr>
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import NavBlock from '@/components/NavBlock'
+import HeaderBlock from '@/components/HeaderBlock'
 import MainBlock from '@/components/MainBlock'
 import FooterBlock from '@/components/FooterBlock'
 export default {
   name: 'App',
   components: {
-    NavBlock,
+    HeaderBlock,
     MainBlock,
     FooterBlock
   },

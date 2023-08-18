@@ -1,9 +1,4 @@
-.navigation__block {
-     padding: 24px 0px;
-     display: flex;
-     justify-content: space-between;
-
-     .navigation__block__information {
+.navigation__block__information {
      display: flex;
      align-items: center;
      
@@ -18,41 +13,6 @@
 
           li{
                margin-left: 48px;
-          }
-     }
-}
-}
-
-
-.navigation__block__user-active {
-     display: flex;
-     align-items: center;
-}
-
-.navigation__block__user-active__basket__wrap {
-     position: relative;
-     display: flex;
-     margin-left: 33px;
-     img {
-          width: 19px;
-          height: 20.58px;
-          display: block;
-     }
-
-     .navigation__block__user-active__count__shop {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: #403432;
-          width: 15px;
-          height: 15px;
-          transform: translateY(-50%);
-          border-radius: 100%;
-          p {
-               font-size: 12px;
-               color: white;
-               margin: 0;
-     
           }
      }
 }

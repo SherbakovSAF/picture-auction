@@ -1,19 +1,8 @@
 <template>
     <header class="navigation__block container">
-    <div class="navigation__block__information">
-      <img src="../../public/img/logo-museum.svg" alt="Музей имени ...">
-      <nav>
-        <ul>
-          <li><a href="#"><h5>Каталог</h5></a></li>
-          <li><a href="#"><h5>Доставка</h5></a></li>
-          <li><a href="#"><h5>Оплата</h5></a></li>
-          <li><a href="#"><h5>Контакты</h5></a></li>
-          <li><a href="#"><h5>О галерее</h5></a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav-module />
     <div class="navigation__block__user-active">
-      <nav-block-input @searchCardValue="$emit('searchCardValue', $event)"/>
+      <header-block-input @searchCardValue="$emit('searchCardValue', $event)"/>
       <div class="navigation__block__user-active__basket__wrap">
         <img src="../../public/img/basket.svg" alt="Купить картины">
         <div 
@@ -27,12 +16,14 @@
 </template>
 
 <script>
-import NavBlockInput from './NavBlock-input';
+import HeaderBlockInput from './HeaderBlock-input';
+import NavModule from './NavModule';
 
 export default {
   name: 'HeaderBlock',
   components: {
-    NavBlockInput
+    HeaderBlockInput,
+    NavModule
   },
   props: {
     selectedCardCount: {type: Number, required: false,}
