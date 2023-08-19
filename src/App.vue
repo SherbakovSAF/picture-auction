@@ -8,20 +8,20 @@
   @updateCard="selectedCardCount = $event"
   :searchCardValue="searchCardValue"
   />
-  <!--<footer-block /> -->
+  <footer-block />
 </div>
 </template>
 
 <script>
 import HeaderBlock from '@/components/HeaderBlock'
 import MainBlock from '@/components/MainBlock'
-// import FooterBlock from '@/components/FooterBlock'
+import FooterBlock from '@/components/FooterBlock'
 export default {
   name: 'App',
   components: {
     HeaderBlock,
     MainBlock,
-    // FooterBlock
+    FooterBlock
   },
   data(){
     return {
