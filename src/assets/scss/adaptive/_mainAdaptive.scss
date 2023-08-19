@@ -18,6 +18,15 @@
                }
           }
      }
+
+     
+
+     .footer__block{
+          justify-content: center;
+          .footer__block__nav{
+               display: none;
+          }
+     }
      
 }
 
@@ -83,6 +92,13 @@
           font-size: 12px;     
           width: 90px;
           height: 35px;
+     }
+
+     .footer__block{
+          padding: 10px 0px;
+          h5{
+               font-size: 13px;
+          }
      }
 }
 
