@@ -44,8 +44,8 @@ h6{
      background: #403432;
      font-size: 14px;
      
-width: 120px;
-height: 45px;
+     width: 120px;
+     height: 45px;
      position: relative;
      border: none;
      color: $main-white;
@@ -87,6 +87,52 @@ input{
 
 
 
-input:focus{
-     border-color: #B5B5B5;
+.hamburg__wrap{
+     display: none;
+     cursor: pointer;
+     input {
+          display: none;
+          cursor: pointer;
+
+          &:checked~div .hamburgItem {
+               opacity: 1;
+               transform: rotate(45deg) translate(-2px, -15px);
+               background: #232323;
+          }
+
+          &:checked~div .hamburgItem:nth-last-child(3) {
+               opacity: 0;
+               transform: rotate(0deg) scale(0.2, 0.2);
+          }
+
+          &:checked~div .hamburgItem:nth-last-child(2) {
+               transform: rotate(-45deg) translate(-5px, 18px);
+               
+          }
+     }
+
+     .hamburgItem{
+          display: block;
+          width: 33px;
+          height: 4px;
+          margin-bottom: 5px;
+        
+          background: #cdcdcd;
+          border-radius: 3px;
+
+          transform-origin: 4px 0px;
+  
+          transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+          &:first-child{
+               transform-origin: 0% 0%;
+          }
+
+          &:nth-last-child(2){
+               transform-origin: 0% 100%;
+          }
+        }
 }
+
+

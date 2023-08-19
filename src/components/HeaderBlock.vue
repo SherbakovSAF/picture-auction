@@ -1,5 +1,5 @@
 <template>
-    <header class="navigation__block container">
+  <header class="navigation__block container">
     <nav-module />
     <div class="navigation__block__user-active">
       <header-block-input @searchCardValue="$emit('searchCardValue', $event)"/>
